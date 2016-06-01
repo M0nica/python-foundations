@@ -102,11 +102,11 @@ print(type(artist_search_result))
 # 13. What are all of the keys that the search result has?
 print(artist_search_result.keys())
 # 14. Take a look at 'artists' - what keys does it have?
-
+# print('ARTISTS KEYS HERE ########')
 print(artist_search_result['artists'].keys())
 # 15. Using len() with something-or-other would show me how many results I CURRENTLY have, but I want to know the TOTAL number of results Spotify has for my search result. From looking at the names of the keys under 'artists', how many total results are there?
 
-print(len(artist_search_result['artists']))
+print("Total number of results is", artist_search_result['artists']['total'])
 
 # 16. How popular is Kendrick Lamar vs. Anna Kendrick? Use a for loop to list the names and popularity of every artist.
 
