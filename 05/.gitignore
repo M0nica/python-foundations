@@ -2,3 +2,5 @@
 config.py
 *.pyc
 config.cpython-35.pyc
+__pycache__
+.ipynb_checkpoints
