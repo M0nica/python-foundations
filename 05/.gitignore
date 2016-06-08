@@ -1,3 +1,4 @@
 #ignores the config file
 config.py
 
+config.cpython-35.pyc
