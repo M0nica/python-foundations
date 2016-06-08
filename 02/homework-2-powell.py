@@ -33,14 +33,17 @@ print(numbers[len(numbers)-1])
 sum = 0
 for number in numbers:
 
+
     if number < 10:
-        number = number * 30
+        newnumber = number * 30
         if number % 2 == 0:
-            number = number + 6
-        if number != - 10:
-            number = number - 1
-    sum = sum + number
-    print(number)
+            newnumber = number + 6
+    if number > 50:
+        newnumber - 10
+    if number != - 10:
+        newnumber = number - 1
+    sum = sum + newnumber
+    print(newnumber)
 
 # 7) Sum the result of each of the numbers divided by two.
 
