@@ -14,7 +14,7 @@ This repository contains homework completed for the Foundations Course with Prof
 - 06
   - Forecastio.io API, Accessing real-time and historical data with UNIX time.
 - 07
-  - Introduction to Pandas and Matplotlib: Created Pandas cheatsheet and explored Billionaire Data.
+  - Introduction to Pandas and Matplotlib: Created Pandas cheatsheet and exploring Billionaire Data.
 - 08
   - More Pandas: Explore StackOverFlow Data
   - Also, used Pandas/Matplotlib to explore the <a href="https://github.com/M0nica/2016-new-coder-survey">2016 New Coder Survey Results</a>.
