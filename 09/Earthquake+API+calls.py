@@ -35,7 +35,7 @@ def depth_to_words(earthquake):
 
   # return("The earthquake had a depth of", earthquake['depth'])
 
-depth_to_words(earthquake)
+#depth_to_words(earthquake)
 
 
 # magnitude_to_words will describe the earthquake's power
@@ -54,15 +54,15 @@ def magnitude_to_words(earthquake):
         return("devastating")
 
  # return("The earthquake had a depth of", earthquake['rms'])
-magnitude_to_words(earthquake)
+#magnitude_to_words(earthquake)
 
 import dateutil.parser
 # should refactor using: http://strftime.net/ instead of custom methods to calculate
 # day of the week and month string
-timestring = '2014-06-01T11:58:58.200Z'
-yourdate = dateutil.parser.parse(timestring)
-print("The hour is", yourdate.hour)
-print("We can do things with strftime like", yourdate.strftime("%Y %b %d"))
+#timestring = '2014-06-01T11:58:58.200Z'
+#yourdate = dateutil.parser.parse(timestring)
+#print("The hour is", yourdate.hour)
+#print("We can do things with strftime like", yourdate.strftime("%Y %b %d"))
 
 # day_in_words should be the day of the week
 
@@ -94,7 +94,7 @@ def day_in_words(earthquake):
         return("Saturday")
     # return weekday
 
-day_in_words(earthquake)
+#day_in_words(earthquake)
 
 # "Wednesday"
 #return(earth)
@@ -114,7 +114,7 @@ def time_in_words(earthquake):
     else:
         return("night")
 
-time_in_words(earthquake)
+#time_in_words(earthquake)
 
 
 # date_in_words should be "Monthname day", e.g. "June 22"
@@ -132,11 +132,20 @@ def date_in_words(earthquake):
     return(months[date_month]+ " " + str(date_digits))
 
 
-date_in_words(earthquake)
+#date_in_words(earthquake)
 
-def eq_to_sentence(earthquake):
-    depth = depth_to_words(earthquake)
-    # return("hello", depth)
-    return("A " + depth + " " + earthquake['mag']+ ", " +magnitude_to_words(earthquake) + " earthquake was reported on " + day_in_words(earthquake) + " " + date_in_words(earthquake) + " of " + earthquake['place'])
 
-print(eq_to_sentence(earthquake))
+import pandas as pd
+
+earthquakes_df = pd.read_csv('http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_month.csv')
+# print(earthquakes_df.head(1))
+earthquakes = earthquakes_df.to_dict('records')
+
+for earthquake in earthquakes:
+    if earthquake['type'] == 'earthquake':
+        def eq_to_sentence(earthquake):
+            depth = depth_to_words(earthquake)
+            return("A " + depth + " " + str(earthquake['mag'])+ ", " + magnitude_to_words(earthquake) + " earthquake was reported on " + day_in_words(earthquake) + " " + date_in_words(earthquake) + " of " + earthquake['place'])
+
+    if earthquake['type'] == 'earthquake':
+        print(eq_to_sentence(earthquake))
