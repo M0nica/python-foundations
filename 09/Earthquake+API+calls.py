@@ -27,13 +27,13 @@ earthquake = {
 def depth_to_words(earthquake):
     depth = int(earthquake['depth'])
     if depth < 70:
-        print("shallow")
+        return("shallow")
     elif 70 < depth < 300:
-        print("intermediate")
+        return("intermediate")
     elif 300 < depth < 700:
-        print("deep")
+        return("deep")
 
-  # print("The earthquake had a depth of", earthquake['depth'])
+  # return("The earthquake had a depth of", earthquake['depth'])
 
 depth_to_words(earthquake)
 
@@ -43,17 +43,17 @@ depth_to_words(earthquake)
 def magnitude_to_words(earthquake):
     mag = float(earthquake['mag'])
     if mag < 3.5:
-        print("minor")
+        return("minor")
     elif 3.5 < mag < 7:
-        print("moderate")
+        return("moderate")
     elif mag == 7:
-        print("major")
+        return("major")
     elif 7 < mag < 9:
-        print("huge")
+        return("huge")
     elif 9 < mag < 10:
-        print("devastating")
+        return("devastating")
 
- # print("The earthquake had a depth of", earthquake['rms'])
+ # return("The earthquake had a depth of", earthquake['rms'])
 magnitude_to_words(earthquake)
 
 import dateutil.parser
@@ -71,33 +71,33 @@ date = dateutil.parser.parse(earthquake['time'])
 
 
 # from dateutil import parser
-#print(parser.parse(earthquake['time']).weekday())
-#print(parser.parse(earthquake['time']), parserinfo=weekday=True)
+#return(parser.parse(earthquake['time']).weekday())
+#return(parser.parse(earthquake['time']), parserinfo=weekday=True)
 def day_in_words(earthquake):
     day = date.weekday()
 
-    #print("the day is", day)
+    #return("the day is", day)
     if day == 6:
-        print("Sunday")
+        return("Sunday")
     elif day == 0:
-        print("Monday")
+        return("Monday")
     elif day == 1:
-        print("Tuesday")
+        return("Tuesday")
     elif day == 2:
         # weekday = "Wednesday"
-        print("Wednesday")
+        return("Wednesday")
     elif day == 3:
-        print("Thursday")
+        return("Thursday")
     elif day == 4:
-        print("Friday")
+        return("Friday")
     elif day == 5:
-        print("Saturday")
+        return("Saturday")
     # return weekday
 
 day_in_words(earthquake)
 
 # "Wednesday"
-#print(earth)
+#return(earth)
 
 
 # time_in_words should be "morning", "afternoon", "evening" or "night"
@@ -106,13 +106,13 @@ def time_in_words(earthquake):
 
     time = date.hour
     if 5 < time < 12:
-        print("morning")
+        return("morning")
     elif 12 < time < 17:
-        print("afternoon")
+        return("afternoon")
     elif 17 < time < 20:
-        print("evening")
+        return("evening")
     else:
-        print("night")
+        return("night")
 
 time_in_words(earthquake)
 
@@ -121,22 +121,22 @@ time_in_words(earthquake)
 def date_in_words(earthquake):
     date_month = int(date.month)
     date_digits = date.day
-    #print(date_ad)
-    # print(date_words)
+    #return(date_ad)
+    # return(date_words)
     months = {}
     digit = 1
     for month in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']:
         months[digit] = month
         digit = digit + 1
 
-    print(months[date_month]+ " " + str(date_digits))
+    return(months[date_month]+ " " + str(date_digits))
 
 
 date_in_words(earthquake)
 
 def eq_to_sentence(earthquake):
     depth = depth_to_words(earthquake)
-    print("hello",depth)
-    return(depth, magnitude_to_words(earthquake), earthquake['mag'])
+    # return("hello", depth)
+    return("A " + depth + " " + earthquake['mag']+ ", " +magnitude_to_words(earthquake) + " earthquake was reported on " + day_in_words(earthquake) + " " + date_in_words(earthquake) + " of " + earthquake['place'])
 
-eq_to_sentence(earthquake)
+print(eq_to_sentence(earthquake))
