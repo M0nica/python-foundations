@@ -151,6 +151,12 @@ for earthquake in earthquakes:
             depth = depth_to_words(earthquake)
 
             return("A " + depth + " " + str(earthquake['mag'])+ ", " + magnitude_to_words(earthquake) + " earthquake was reported on " + day_in_words(earthquake) + " " + date_in_words(earthquake) + " of " + earthquake['place'])
+    else:
+        def other_to_sequence(earthquake):
+
+            return("There was also also a magnitude " + str(earthquake['mag'])+ ", " + earthquake['type'] + " on " + day_in_words(earthquake) + " " + date_in_words(earthquake) + " of " + earthquake['place'])
 
     if earthquake['type'] == 'earthquake':
         print(eq_to_sentence(earthquake))
+    else:
+        print(other_to_sequence(earthquake))
