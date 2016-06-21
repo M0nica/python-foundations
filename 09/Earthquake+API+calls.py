@@ -32,6 +32,8 @@ def depth_to_words(earthquake):
         return("intermediate")
     elif 300 < depth < 700:
         return("deep")
+    else:
+        return("")
 
   # return("The earthquake had a depth of", earthquake['depth'])
 
@@ -52,6 +54,8 @@ def magnitude_to_words(earthquake):
         return("huge")
     elif 9 < mag < 10:
         return("devastating")
+    else:
+        return("unknown")
 
  # return("The earthquake had a depth of", earthquake['rms'])
 #magnitude_to_words(earthquake)
@@ -145,6 +149,7 @@ for earthquake in earthquakes:
     if earthquake['type'] == 'earthquake':
         def eq_to_sentence(earthquake):
             depth = depth_to_words(earthquake)
+
             return("A " + depth + " " + str(earthquake['mag'])+ ", " + magnitude_to_words(earthquake) + " earthquake was reported on " + day_in_words(earthquake) + " " + date_in_words(earthquake) + " of " + earthquake['place'])
 
     if earthquake['type'] == 'earthquake':
