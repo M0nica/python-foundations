@@ -18,3 +18,5 @@ This repository contains homework completed for the Foundations Course with Prof
 - 08
   - More Pandas: Explore StackOverFlow Data
   - Also, used Pandas/Matplotlib to explore the <a href="https://github.com/M0nica/2016-new-coder-survey">2016 New Coder Survey Results</a>.
+- 09
+  - Using custom methods and dateutil.parser in order to translate data about earthquakes from http://earthquake.usgs.gov/ into descriptive sentences. 
