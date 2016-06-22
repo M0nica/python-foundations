@@ -19,4 +19,8 @@ This repository contains homework completed for the Foundations Course with Prof
   - More Pandas: Explore StackOverFlow Data
   - Also, used Pandas/Matplotlib to explore the <a href="https://github.com/M0nica/2016-new-coder-survey">2016 New Coder Survey Results</a>.
 - 09
-  - Using custom methods and dateutil.parser in order to translate data about earthquakes from http://earthquake.usgs.gov/ into descriptive sentences. 
+  - Using custom methods and dateutil.parser in order to translate data about earthquakes from http://earthquake.usgs.gov/ into descriptive sentences.
+- 10
+  - Script to send NYC weather report to e-mail. Utilized Forecast.io and mailgun.
+    -`forecast.py` script of interest
+    -`mailguntest.py` script used to test delivery of mail
