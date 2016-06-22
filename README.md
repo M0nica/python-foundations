@@ -22,5 +22,5 @@ This repository contains homework completed for the Foundations Course with Prof
   - Using custom methods and dateutil.parser in order to translate data about earthquakes from http://earthquake.usgs.gov/ into descriptive sentences.
 - 10
   - Script to send NYC weather report to e-mail. Utilized Forecast.io and mailgun.
-    -`forecast.py` script of interest
-    -`mailguntest.py` script used to test delivery of mail
+    - `forecast.py` script of interest
+    - `mailguntest.py` script used to test delivery of mail
