@@ -61,6 +61,9 @@ print("Right now it is " + TEMPERATURE() + " degrees out and " + \
 
 import config
 import requests
+import time
+today = time.strftime("%B %e, %Y")
+
 
 key = config.mailgun_key
 def send_simple_message():
@@ -69,7 +72,7 @@ def send_simple_message():
         auth=("api", key),
         data={"from": "Mailgun Sandbox <postmaster@sandbox6e6a92af0098467b96a693d5b2941ec4.mailgun.org>",
               "to": "Monica <mmp2181@columbia.edu>",
-              "subject": "8AM Weather Forecast",
+              "subject": "8AM Weather Forecast: " + today,
               "text": "Right now it is " + TEMPERATURE() + " degrees out and " + \
                SUMMARY() + ". Today will be " + TEMP_FEELING() + \
               " with a high of " + HIGH_TEMP() + \

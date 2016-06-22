@@ -10,4 +10,4 @@ Edit cron job
 - `crontab -e`
 
 - `0 8 * * * python3 forecast.py`
-  - runs the forecast.py script once a day
+  - runs the forecast.py script once a day  at 8 AM.
