@@ -1,4 +1,4 @@
-#These are the steps I took to access digital ocean
+This README serves as a guide as to how I transferred this script into my do-droplet and scheduled cron job.
 
 Navigate to Digital Ocean Droplet in server
 - `ssh -i ~/.ssh/do-droplet root@MY_IP`
