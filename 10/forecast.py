@@ -72,9 +72,9 @@ today = time.strftime("%B %e, %Y")
 key = config.mailgun_key
 def send_simple_message():
     return requests.post(
-        "https://api.mailgun.net/v3/sandbox6e6a92af0098467b96a693d5b2941ec4.mailgun.org/messages",
+        "https://api.mailgun.net/v3/aboutmonica.com/messages",
         auth=("api", key),
-        data={"from": "Mailgun Sandbox <postmaster@sandbox6e6a92af0098467b96a693d5b2941ec4.mailgun.org>",
+        data={"from": "Daily Weather Report <weather@aboutmonica.com>",
               "to": "Monica <mmp2181@columbia.edu>",
               "subject": "8AM Weather Forecast: " + today,
               "text": "Right now it is " + TEMPERATURE() +  degree_sign + " out and " + \
