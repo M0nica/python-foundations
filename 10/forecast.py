@@ -29,11 +29,11 @@ def SUMMARY():
 def TEMP_FEELING():
     #is whether it will be hot, warm, cold, or moderate.
     if max_temp > 90:
-        return "it will be hot"
+        return "hot"
     elif 90 > max_temp > 70:
-        return "it will moderate"
+        return "moderate"
     else:
-        return "it will be cold"
+        return "cool"
 
 
 
@@ -46,8 +46,12 @@ def LOW_TEMP():
     return str(data['daily']['data'][0]['temperatureMin'])
 
 def RAIN_WARNING():
+    return("%.0f%%" % (100 * (data['daily']['data'][0]['precipProbability'])/1) + " chance of rain")
 #is something like "bring your umbrella!" if it is going to rain at some point during the day.
-    return str(data['daily']['data'][0]['precipProbability']) + "% chance of rain."
+    #return str(data['daily']['data'][0]['precipProbability']) + "% chance of rain."
+
+
+
 # the current date's weath
 TEMP_FEELING()
 #TEMPERATURE()
