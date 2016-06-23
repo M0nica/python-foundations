@@ -1,7 +1,7 @@
-
+# -*- coding: utf-8 -*-
 import config
 import requests
-
+degree_sign= u'\N{DEGREE SIGN}'
 weather_key = config.weather_key
 
 # api key  - latitude, longitude, time (epoch)
@@ -57,10 +57,10 @@ TEMP_FEELING()
 #TEMPERATURE()
 
 
-print("Right now it is " + TEMPERATURE() + " degrees out and " + \
+print("Right now it is " + TEMPERATURE() +  degree_sign +  "  out and " + \
  SUMMARY() + ". Today will be " + TEMP_FEELING() + \
-" with a high of " + HIGH_TEMP() + \
-" and a low of " + LOW_TEMP() + ". There is a " + RAIN_WARNING() )
+" with a high of " + HIGH_TEMP() +  degree_sign + \
+" and a low of " + LOW_TEMP() +  degree_sign + ". There is a " + RAIN_WARNING() )
 
 
 import config
@@ -77,10 +77,10 @@ def send_simple_message():
         data={"from": "Mailgun Sandbox <postmaster@sandbox6e6a92af0098467b96a693d5b2941ec4.mailgun.org>",
               "to": "Monica <mmp2181@columbia.edu>",
               "subject": "8AM Weather Forecast: " + today,
-              "text": "Right now it is " + TEMPERATURE() + " degrees out and " + \
+              "text": "Right now it is " + TEMPERATURE() +  degree_sign + " out and " + \
                SUMMARY() + ". Today will be " + TEMP_FEELING() + \
-              " with a high of " + HIGH_TEMP() + \
-              " and a low of " + LOW_TEMP() + ". There is a " + RAIN_WARNING()})
+              " with a high of " + HIGH_TEMP() + degree_sign + \
+              " and a low of " + LOW_TEMP() + degree_sign + ". There is a " + RAIN_WARNING()})
 
 
 send_simple_message()
