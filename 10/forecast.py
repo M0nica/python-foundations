@@ -19,7 +19,7 @@ max_temp = data['daily']['data'][0]['temperatureMax']
 
 def TEMPERATURE():
  # is the current temperature
- return str(data['currently']['temperature'])
+ return str(int(data['currently']['temperature']))
 
 def SUMMARY():
 
@@ -39,11 +39,11 @@ def TEMP_FEELING():
 
 def HIGH_TEMP():
 #is the high temperature for the day.
-    return str(max_temp)
+    return str(int(max_temp))
 
 def LOW_TEMP():
 #is the low temperature for the day.
-    return str(data['daily']['data'][0]['temperatureMin'])
+    return str(int(data['daily']['data'][0]['temperatureMin']))
 
 def RAIN_WARNING():
     return("%.0f%%" % (100 * (data['daily']['data'][0]['precipProbability'])/1) + " chance of rain")
