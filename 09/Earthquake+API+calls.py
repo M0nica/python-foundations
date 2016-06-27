@@ -150,6 +150,7 @@ for earthquake in earthquakes:
         def eq_to_sentence(earthquake):
             depth = depth_to_words(earthquake)
 
+
             return("A " + depth + " " + str(earthquake['mag'])+ ", " + magnitude_to_words(earthquake) + " earthquake was reported on " + day_in_words(earthquake) + " " + date_in_words(earthquake) + " of " + earthquake['place'])
     else:
         def other_to_sequence(earthquake):
