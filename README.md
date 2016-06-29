@@ -24,3 +24,5 @@ This repository contains homework completed for the Foundations Course with Prof
   - Script to send NYC weather report to e-mail. Utilized Forecast.io and mailgun.
     - `forecast.py` script of interest
     - `mailguntest.py` script used to test delivery of mail
+- 11
+  - Cleaned up NYC traffic data in Python for data analysis
