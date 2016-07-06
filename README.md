@@ -1,5 +1,5 @@
-# python-foundations-hw
-This repository contains homework completed for the Foundations Course with Professor Jonathan Soma in The Lede Program @ Columbia Journalism School.
+# python-foundations
+This repository contains projects completed for the Foundations Course with Professor Jonathan Soma in The Lede Program @ Columbia Journalism School.
 
 - 01
   - Python Basics: User prompts and calculations.
