@@ -1,0 +1,11 @@
+// Waiting completion. Please email or slack me when this good to go! 
+
+For #6 (referring back to how Soma numbered the HW questions), you check your color function by running `violations_df['Vehicle Color'].head()` which then returns: 
+
+        0     GREY
+        1    WHITE
+        3    WHITE
+        4    BROWN
+        6       GN
+        
+Based on your code, I don't think your color function capture the "GN" possibility, so you'd gave to revisit your function to handle that possibility. 
